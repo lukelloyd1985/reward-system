@@ -1,0 +1,16 @@
+{
+    "1": {
+        "name": "Jack",
+        "currency": "£",
+        "image": "rockets",
+        "rewards": 0,
+        "pay": 0
+    },
+    "2": {
+        "name": "Jill",
+        "currency": "£",
+        "image": "stars",
+        "rewards": 0,
+        "pay": 0
+    }
+}
