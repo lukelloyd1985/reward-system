@@ -68,8 +68,8 @@
 
   <body>
     <?php
-      $data = json_decode(file_get_contents('data.json', true));
-      echo $data->kid1->icons;
+      $data = json_decode(file_get_contents('kids.json'));
+      echo $data->k1->name;
     ?>
 
     <table>
