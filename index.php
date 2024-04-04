@@ -69,15 +69,14 @@
   <body>
     <?php
       $data = json_decode(file_get_contents('kids.json'));
-      echo $data->k3->name;
-      $kid1 = 4
-      $kid2 = 8
+      $kid1 = 4;
+      $kid2 = 8;
     ?>
 
     <table>
       <tr>
-        <th><a href="#">+</a> <?php $data->k1->name; ?> <a href="#">-</a></th>
-        <th><a href="#">+</a> <?php $data->k2->name; ?> <a href="#">-</a></th>
+        <th><a href="#">+</a> <?php echo $data->k1->name; ?> <a href="#">-</a></th>
+        <th><a href="#">+</a> <?php echo $data->k2->name; ?> <a href="#">-</a></th>
       </tr>
       <tr>
         <td><br></td>
