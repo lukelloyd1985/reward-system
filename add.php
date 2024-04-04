@@ -26,6 +26,6 @@
     ?>
 
     <?php echo $kid; ?>    
-    <center><img src="<?php echo '<img src="images/', $data->$kid->image, '/add.gif'; ?>" width="400" height="400"></center>
+    <center><img src="<?php echo 'images/', $data->$kid->image, '/add.gif'; ?>" width="400" height="400"></center>
   </body>
 </html>
