@@ -73,8 +73,8 @@
 
     <table>
       <tr>
-        <th><a href="#">+</a> <?php echo $data->k1->name; ?> <a href="#">-</a></th>
-        <th><a href="#">+</a> <?php echo $data->k2->name; ?> <a href="#">-</a></th>
+        <th><a href="add.php?kid=k1">+</a> <?php echo $data->k1->name; ?> <a href="remove.php?kid=k1">-</a></th>
+        <th><a href="add.php?kid=k2">+</a> <?php echo $data->k2->name; ?> <a href="remove.php?kid=k2">-</a></th>
       </tr>
       <tr>
         <td><br></td>
