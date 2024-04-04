@@ -69,24 +69,26 @@
   <body>
     <?php
       $data = json_decode(file_get_contents('kids.json'));
-      echo $data->k1->name;
+      echo $data->k3->name;
+      $kid1 = 4
+      $kid2 = 8
     ?>
 
     <table>
       <tr>
-        <th><a href="add.php">+</a> Kid1 <a href="remove.php">-</a></th>
-        <th><a href="add.php">+</a> Kid2 <a href="remove.php">-</a></th>
+        <th><a href="#">+</a> <?php $data->k1->name; ?> <a href="#">-</a></th>
+        <th><a href="#">+</a> <?php $data->k2->name; ?> <a href="#">-</a></th>
       </tr>
       <tr>
         <td><br></td>
       </tr>
       <tr>
-        <td>£<?php echo $owed; ?> owed. <a href="pay.php">Pay?</a></td>
-        <td>£<?php echo $owed; ?> owed. <a href="pay.php">Pay?</a></td>
+        <td>£<?php echo $owed; ?> owed. <a href="#">Pay?</a></td>
+        <td>£<?php echo $owed; ?> owed. <a href="#">Pay?</a></td>
       </tr>
       <tr>
-        <td><?php for ($k = 0 ; $k < $kid1; $k++){ echo '<img src="images/stars/icon.png" width="87" height="89">'; } ?></td>
-        <td><?php for ($k = 0 ; $k < $kid2; $k++){ echo '<img src="images/stars/icon" width="87" height="89">'; } ?></td>
+        <td><?php for ($k = 0 ; $k < $kid1; $k++){ echo '<img src="images/', $data->k1->image, '/icon.png" width="75" height="75">'; } ?></td>
+        <td><?php for ($k = 0 ; $k < $kid2; $k++){ echo '<img src="images/', $data->k2->image, '/icon.png" width="75" height="75">'; } ?></td>
       </tr>
     </table>
   </body>
