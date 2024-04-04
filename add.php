@@ -25,7 +25,6 @@
       $data = json_decode(file_get_contents('kids.json'));
     ?>
 
-    <?php echo $kid; ?>    
-    <center><img src="<?php echo 'images/', $data->$kid->image, '/add.gif'; ?>" width="400" height="400"></center>
+    <center><img src="<?php echo 'images/', $data->$kid->image, '/add.gif'; ?>" height="350"></center>
   </body>
 </html>
