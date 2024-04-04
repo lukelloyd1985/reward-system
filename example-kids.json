@@ -3,14 +3,18 @@
         "name": "Jack",
         "currency": "£",
         "image": "rockets",
+        "maxRewards": 18,
+        "pay": 2,
         "rewards": 0,
-        "pay": 0
+        "cash": 0
     },
     "k2": {
         "name": "Jill",
         "currency": "£",
         "image": "stars",
+        "maxRewards": 18,
+        "pay": 2,
         "rewards": 0,
-        "pay": 0
+        "cash": 0
     }
 }
