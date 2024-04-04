@@ -80,8 +80,8 @@
         <td><br></td>
       </tr>
       <tr>
-        <td><?php echo $data->k1->currency, $data->k1->pay; ?> owed. <a href="#">Pay?</a></td>
-        <td><?php echo $data->k2->currency, $data->k2->pay; ?> owed. <a href="#">Pay?</a></td>
+        <td><?php echo $data->k1->currency, $data->k1->cash; ?> owed. <a href="#">Pay?</a></td>
+        <td><?php echo $data->k2->currency, $data->k2->cash; ?> owed. <a href="#">Pay?</a></td>
       </tr>
       <tr>
         <td><?php for ($k = 0 ; $k < $data->k1->rewards; $k++){ echo '<img src="images/', $data->k1->image, '/icon.png" width="75" height="75">'; } ?></td>
