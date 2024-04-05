@@ -5,6 +5,8 @@
         "image": "rockets",
         "maxRewards": 18,
         "pay": 2,
+        "pushoverAppToken": "",
+        "pushoverUserKey": "",
         "rewards": 0,
         "cash": 0
     },
@@ -14,6 +16,8 @@
         "image": "stars",
         "maxRewards": 18,
         "pay": 2,
+        "pushoverAppToken": "",
+        "pushoverUserKey": "",
         "rewards": 0,
         "cash": 0
     }
