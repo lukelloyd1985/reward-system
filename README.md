@@ -22,7 +22,7 @@ Options exist for each kid (k1 & k2) within the JSON file...
 
 `image`: name of directory under "images" to use for rewards
 
-`maxRewards`: max rewards to display before payout
+`maxRewards`: max rewards to display before payout. For reward icons to show correctly on tablet screens is looks like "18" is a good value for 2x kids and "36" for 1x kid.
 
 `pay`: amount to pay after max rewards
 
