@@ -80,8 +80,8 @@
         <td><br></td>
       </tr>
       <tr>
-        <td><?php echo $data->k1->currency, $data->k1->cash; ?> owed. <a href="pay.php?kid=k1">Pay?</a></td>
-        <td <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><?php echo $data->k2->currency, $data->k2->cash; ?> owed. <a href="pay.php?kid=k2">Pay?</a></td>
+        <td><?php echo $data->k1->currency, $data->k1->cash; ?> owed. <?php if ($data->k1->cash > 0) { echo '<a href="pay.php?kid=k1">Pay?</a>'; } ?></td>
+        <td <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><?php echo $data->k2->currency, $data->k2->cash; ?> owed. <?php if ($data->k2->cash > 0) { echo '<a href="pay.php?kid=k2">Pay?</a>'; } ?></td>
       </tr>
       <tr>
         <td><?php for ($k = 0 ; $k < $data->k1->rewards; $k++){ echo '<img src="images/', $data->k1->image, '/icon.png" width="75" height="75">'; } ?></td>
