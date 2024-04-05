@@ -73,8 +73,8 @@
 
     <table>
       <tr>
-        <th><a href="add.php?kid=k1">+</a> <?php echo $data->k1->name; ?> <a href="remove.php?kid=k1">-</a></th>
-        <th><a href="add.php?kid=k2">+</a> <?php echo $data->k2->name; ?> <a href="remove.php?kid=k2">-</a></th>
+        <th><a href="add.php?kid=k1">+</a> <?php echo $data->k1->name; ?> <?php if ($data->k1->rewards > 0) { echo '<a href="remove.php?kid=k1">-</a>'; } ?></th>
+        <th><a href="add.php?kid=k2">+</a> <?php echo $data->k2->name; ?> <?php if ($data->k2->rewards > 0) { echo '<a href="remove.php?kid=k2">-</a>'; } ?></th>
       </tr>
       <tr>
         <td><br></td>
