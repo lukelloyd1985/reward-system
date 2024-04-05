@@ -43,3 +43,5 @@ If you can code in PHP and would like to contribute then feel free to pick up a 
 ## Acknowledgements
 
 Thanks to [@hodcon](https://github.com/hodcon) for his code which was the basis for this
+
+Thanks to [@cschalenborgh](https://github.com/cschalenborgh) for his [php-pushover](https://github.com/cschalenborgh/php-pushover) class
