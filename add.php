@@ -35,7 +35,12 @@
       file_put_contents('kids.json', $newData);
 
       if ($data->$kid->pushoverAppToken && $data->$kid->pushoverUserKey) {
-        echo "use pushover";
+        $push = new Pushover();
+        $push->setToken($data->$kid->pushoverAppToken);
+        $push->setUser($data->$kid->pushoverUserKey);
+        $push->setMessage($data->$kid->name . 'added reward');
+        $push->setUrl($_SERVER['SERVER_NAME']);
+        $push->send();
       }
     ?>
 
