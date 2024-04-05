@@ -18,7 +18,7 @@
       }
     </style>
 
-    <meta http-equiv="refresh" content="1;url=<?php echo dirname($_SERVER['PHP_SELF']); ?>" />
+    <meta http-equiv="refresh" content="1;url=<?php echo $_SERVER['HTTP_REFERER']; ?>" />
   </head>
 
   <body>
@@ -39,7 +39,7 @@
         $push->setToken($data->$kid->pushoverAppToken);
         $push->setUser($data->$kid->pushoverUserKey);
         $push->setMessage($data->$kid->name . ' added reward');
-        $push->setUrl('https://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']));
+        $push->setUrl($_SERVER['HTTP_REFERER']);
         $push->send();
       }
     ?>
