@@ -38,8 +38,8 @@
         $push = new Pushover();
         $push->setToken($data->$kid->pushoverAppToken);
         $push->setUser($data->$kid->pushoverUserKey);
-        $push->setMessage($data->$kid->name . 'added reward');
-        $push->setUrl($_SERVER['SERVER_NAME']);
+        $push->setMessage($data->$kid->name . ' added reward');
+        $push->setUrl('https://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']));
         $push->send();
       }
     ?>
