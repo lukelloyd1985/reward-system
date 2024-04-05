@@ -1,3 +1,5 @@
+<?php include('pushover.php'); ?>
+
 <html>
   <head>
     <title>Kids Reward System</title>
@@ -31,6 +33,10 @@
       }
       $newData = json_encode($data, JSON_PRETTY_PRINT);
       file_put_contents('kids.json', $newData);
+
+      if ($data->$kid->pushoverAppToken && $data->$kid->pushoverUserKey) {
+        echo "use pushover"
+      }
     ?>
 
     <center><img src="<?php echo 'images/', $data->$kid->image, '/add.gif'; ?>" height="350"></center>
