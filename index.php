@@ -74,18 +74,18 @@
     <table>
       <tr>
         <th><a href="add.php?kid=k1">+</a> <?php echo $data->k1->name; ?> <?php if ($data->k1->rewards > 0) { echo '<a href="remove.php?kid=k1">-</a>'; } ?></th>
-        <th><a href="add.php?kid=k2">+</a> <?php echo $data->k2->name; ?> <?php if ($data->k2->rewards > 0) { echo '<a href="remove.php?kid=k2">-</a>'; } ?></th>
+        <th <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><a href="add.php?kid=k2">+</a> <?php echo $data->k2->name; ?> <?php if ($data->k2->rewards > 0) { echo '<a href="remove.php?kid=k2">-</a>'; } ?></th>
       </tr>
       <tr>
         <td><br></td>
       </tr>
       <tr>
         <td><?php echo $data->k1->currency, $data->k1->cash; ?> owed. <a href="#">Pay?</a></td>
-        <td><?php echo $data->k2->currency, $data->k2->cash; ?> owed. <a href="#">Pay?</a></td>
+        <td <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><?php echo $data->k2->currency, $data->k2->cash; ?> owed. <a href="#">Pay?</a></td>
       </tr>
       <tr>
         <td><?php for ($k = 0 ; $k < $data->k1->rewards; $k++){ echo '<img src="images/', $data->k1->image, '/icon.png" width="75" height="75">'; } ?></td>
-        <td><?php for ($k = 0 ; $k < $data->k2->rewards; $k++){ echo '<img src="images/', $data->k2->image, '/icon.png" width="75" height="75">'; } ?></td>
+        <td <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><?php for ($k = 0 ; $k < $data->k2->rewards; $k++){ echo '<img src="images/', $data->k2->image, '/icon.png" width="75" height="75">'; } ?></td>
       </tr>
     </table>
   </body>
