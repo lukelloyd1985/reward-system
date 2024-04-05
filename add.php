@@ -24,7 +24,8 @@
       $kid = $_GET["kid"];
       $data = json_decode(file_get_contents('kids.json'));
       if ($data->$kid->rewards == $data->$kid->maxRewards) {
-        sd
+        $data->$kid->cash = $data->$kid->cash + $data->$kid->pay;
+        $data->$kid->rewards = 0;
       } else {
         $data->$kid->rewards = $data->$kid->rewards + 1;
       }
