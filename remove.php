@@ -1,3 +1,5 @@
+<?php include('pushover.php'); ?>
+
 <html>
   <head>
     <title>Kids Reward System</title>
