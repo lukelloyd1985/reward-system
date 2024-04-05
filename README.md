@@ -26,6 +26,10 @@ Options exist for each kid (k1 & k2) within the JSON file...
 
 `pay`: amount to pay after max rewards
 
+`pushoverAppToken`: add pushover.net "Application/API Token" if push notifications are required
+
+`pushoverUserKey`: add pushover.net "User Key" if push notifications are required
+
 `rewards`: LEAVE - this is used to track rewards count
 
 `cash`: LEAVE - this is used to track amount owed
@@ -39,3 +43,5 @@ If you can code in PHP and would like to contribute then feel free to pick up a 
 ## Acknowledgements
 
 Thanks to [@hodcon](https://github.com/hodcon) for his code which was the basis for this
+
+Thanks to [@cschalenborgh](https://github.com/cschalenborgh) for his [php-pushover](https://github.com/cschalenborgh/php-pushover) class
