@@ -24,7 +24,7 @@
       $kid = $_GET["kid"];
       $data = json_decode(file_get_contents('kids.json'));
       $data->$kid->rewards = $data->$kid->rewards - 1;
-      $newData = json_encode($data);
+      $newData = json_encode($data, JSON_PRETTY_PRINT);
       file_put_contents('kids.json', $newData);
     ?>
 
