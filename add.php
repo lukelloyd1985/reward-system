@@ -6,7 +6,7 @@
         font-family: kids;
         font-style: normal;
         font-weight: normal;
-        src: url(fonts/3dumb.ttf);
+        src: url(fonts/maple3cartoon.woff);
       }
 
       body {
