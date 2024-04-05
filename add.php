@@ -35,7 +35,7 @@
       file_put_contents('kids.json', $newData);
 
       if ($data->$kid->pushoverAppToken && $data->$kid->pushoverUserKey) {
-        echo "use pushover"
+        echo "use pushover";
       }
     ?>
 
