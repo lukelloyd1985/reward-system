@@ -38,7 +38,7 @@
         $push = new Pushover();
         $push->setToken($data->$kid->pushoverAppToken);
         $push->setUser($data->$kid->pushoverUserKey);
-        $push->setMessage($data->$kid->name . ' added reward');
+        $push->setMessage($data->$kid->name . ' added reward' . chr(10) . chr(10) . 'cash: ' . $data->$kid->currency . $data->$kid->cash . chr(10) . 'rewards: ' . $data->$kid->rewards);
         $push->setUrl($_SERVER['HTTP_REFERER']);
         $push->send();
       }
