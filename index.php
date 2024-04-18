@@ -69,6 +69,10 @@
   <body>
     <?php
       $data = json_decode(file_get_contents('kids.json'));
+      $k1p = (($data->k1->rewards / $data->k1->maxRewards) * 100);
+      $k2p = (($data->k2->rewards / $data->k2->maxRewards) * 100);
+      echo $k1p;
+      echo $k2p;
     ?>
 
     <table>
