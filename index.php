@@ -58,6 +58,24 @@
         text-decoration: none;
         color: #000000;
       }
+
+      .weekdays {
+        margin: 0;
+        padding: 10px 0;
+        background-color: #ddd;
+      }
+
+      .weekdays li {
+        display: inline-block;
+        width: 13.6%;
+        color: #666;
+        text-align: center;
+      }
+
+      .weekdays li .active {
+        padding: 5px;
+        background: #1abc9c;
+      }
     </style>
 
     <meta http-equiv="refresh" content="300" />
