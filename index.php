@@ -69,6 +69,12 @@
   <body>
     <?php
       $data = json_decode(file_get_contents('kids.json'));
+      $k1p = (int)(($data->k1->rewards / $data->k1->maxRewards) * 100);
+      $k2p = (int)(($data->k2->rewards / $data->k2->maxRewards) * 100);
+      if ($k1p < 5) { $k1p = 7; }
+      if ($k1p > 95) { $k1p = 95; }
+      if ($k2p < 5) { $k2p = 7; }
+      if ($k2p > 95) { $k2p = 95; }
     ?>
 
     <table>
@@ -77,7 +83,8 @@
         <th <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><a href="add.php?kid=k2">+</a> <?php echo $data->k2->name; ?> <?php if ($data->k2->rewards > 0) { echo '<a href="remove.php?kid=k2">-</a>'; } ?></th>
       </tr>
       <tr>
-        <td><br></td>
+        <td><div <?php if (!$data->k1->progressBar) { echo 'style="display:none"'; } ?> style="padding:10px 50px; font-size: 16px"><div style="background-color:lightblue; border-radius:8px"><div style="padding:5px; background-color:lightblue; border-radius:8px; width:<?php echo $k1p ?>%">&nbsp;<img src="images/<?php echo $data->k1->image ?>/icon.png" style="height:20px;float:right"></div></div></div></td>
+        <td <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><div <?php if (!$data->k2->progressBar) { echo 'style="display:none"'; } ?> style="padding:10px 50px; font-size: 16px"><div style="background-color:lightblue; border-radius:8px"><div style="padding:5px; background-color:lightblue; border-radius:8px; width:<?php echo $k2p ?>%">&nbsp;<img src="images/<?php echo $data->k2->image ?>/icon.png" style="height:20px;float:right"></div></div></div></td>
       </tr>
       <tr>
         <td><?php echo $data->k1->currency, $data->k1->cash; ?> owed. <?php if ($data->k1->cash > 0) { echo '<a href="pay.php?kid=k1">Pay?</a>'; } ?></td>
