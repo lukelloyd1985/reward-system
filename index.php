@@ -17,7 +17,6 @@
 
       h1 {
         font-family: kids;
-        font-size: 100px;
         font-weight:normal;
         color: #000000;
         text-align: center;
@@ -25,7 +24,6 @@
 
       table {
         width: 100%;
-        font-size: 20px;
         border-collapse: separate;
         border-spacing: 0;
         border-radius: 25px;
@@ -35,7 +33,7 @@
 
       th {
         font-family: kids;
-        font-size: 90px;
+        font-size: 60px;
         font-weight:normal;
         color: #000000;
         text-align: center;
@@ -48,7 +46,7 @@
 
       td {
         font-family: kids;
-        font-size: 40px;
+        font-size: 30px;
         font-weight:normal;
         vertical-align: top;
         text-align: center;
@@ -64,6 +62,7 @@
         padding: 10px 0;
         background-color: #ddd;
         font-family: kids;
+        font-size: 20px;
       }
 
       .weekdays li {
