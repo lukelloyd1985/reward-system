@@ -95,6 +95,16 @@
       if ($k2p > 95) { $k2p = 95; }
     ?>
 
+    <ul class="weekdays">
+      <li><span class="">Mon</span></li>
+      <li><span class="">Tue</span></li>
+      <li><span class="active">Wed</span></li>
+      <li><span class="">Thu</span></li>
+      <li><span class="">Fri</span></li>
+      <li><span class="">Sat</span></li>
+      <li><span class="">Sun</span></li>
+    </ul>
+
     <table>
       <tr>
         <th><a href="add.php?kid=k1">+</a> <?php echo $data->k1->name; ?> <?php if ($data->k1->rewards > 0) { echo '<a href="remove.php?kid=k1">-</a>'; } ?></th>
