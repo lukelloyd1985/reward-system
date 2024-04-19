@@ -85,6 +85,7 @@
 
   <body>
     <?php
+      $weekDay = date('D');
       $data = json_decode(file_get_contents('kids.json'));
       $k1p = (int)(($data->k1->rewards / $data->k1->maxRewards) * 100);
       $k2p = (int)(($data->k2->rewards / $data->k2->maxRewards) * 100);
@@ -95,13 +96,13 @@
     ?>
 
     <ul class="weekdays">
-      <li><span class="">Mon</span></li>
-      <li><span class="">Tue</span></li>
-      <li><span class="active">Wed</span></li>
-      <li><span class="">Thu</span></li>
-      <li><span class="">Fri</span></li>
-      <li><span class="">Sat</span></li>
-      <li><span class="">Sun</span></li>
+      <li><span class="<?php if ($weekDay == "Mon") { echo 'active'; } ?>">Mon</span></li>
+      <li><span class="<?php if ($weekDay == "Tue") { echo 'active'; } ?>">Tue</span></li>
+      <li><span class="<?php if ($weekDay == "Wed") { echo 'active'; } ?>">Wed</span></li>
+      <li><span class="<?php if ($weekDay == "Thu") { echo 'active'; } ?>">Thu</span></li>
+      <li><span class="<?php if ($weekDay == "Fri") { echo 'active'; } ?>">Fri</span></li>
+      <li><span class="<?php if ($weekDay == "Sat") { echo 'active'; } ?>">Sat</span></li>
+      <li><span class="<?php if ($weekDay == "Sun") { echo 'active'; } ?>">Sun</span></li>
     </ul>
 
     <table>
