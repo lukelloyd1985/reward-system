@@ -71,9 +71,9 @@
       $data = json_decode(file_get_contents('kids.json'));
       $k1p = (int)(($data->k1->rewards / $data->k1->maxRewards) * 100);
       $k2p = (int)(($data->k2->rewards / $data->k2->maxRewards) * 100);
-      if ($k1p < 5) { $k1p = 5; }
+      if ($k1p < 5) { $k1p = 7; }
       if ($k1p > 95) { $k1p = 95; }
-      if ($k2p < 5) { $k2p = 5; }
+      if ($k2p < 5) { $k2p = 7; }
       if ($k2p > 95) { $k2p = 95; }
     ?>
 
