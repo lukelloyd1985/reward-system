@@ -63,6 +63,7 @@
         margin: 0;
         padding: 10px 0;
         background-color: #ddd;
+        font-family: kids;
       }
 
       .weekdays li {
