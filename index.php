@@ -17,7 +17,6 @@
 
       h1 {
         font-family: kids;
-        font-size: 100px;
         font-weight:normal;
         color: #000000;
         text-align: center;
@@ -25,7 +24,6 @@
 
       table {
         width: 100%;
-        font-size: 20px;
         border-collapse: separate;
         border-spacing: 0;
         border-radius: 25px;
@@ -35,7 +33,7 @@
 
       th {
         font-family: kids;
-        font-size: 90px;
+        font-size: 60px;
         font-weight:normal;
         color: #000000;
         text-align: center;
@@ -48,7 +46,7 @@
 
       td {
         font-family: kids;
-        font-size: 40px;
+        font-size: 30px;
         font-weight:normal;
         vertical-align: top;
         text-align: center;
@@ -57,6 +55,25 @@
       a { 
         text-decoration: none;
         color: #000000;
+      }
+
+      .weekdays {
+        margin: 0;
+        padding: 10px 0;
+        background-color: lightblue;
+        font-family: kids;
+        font-size: 20px;
+      }
+
+      .weekdays li {
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+      }
+
+      .weekdays li .active {
+        padding: 5px;
+        background: orchid;
       }
     </style>
 
@@ -68,6 +85,7 @@
 
   <body>
     <?php
+      $weekDay = date('D');
       $data = json_decode(file_get_contents('kids.json'));
       $k1p = (int)(($data->k1->rewards / $data->k1->maxRewards) * 100);
       $k2p = (int)(($data->k2->rewards / $data->k2->maxRewards) * 100);
@@ -76,6 +94,16 @@
       if ($k2p < 5) { $k2p = 7; }
       if ($k2p > 95) { $k2p = 95; }
     ?>
+
+    <ul class="weekdays">
+      <li><span class="<?php if ($weekDay == "Mon") { echo 'active'; } ?>">Mon</span></li>
+      <li><span class="<?php if ($weekDay == "Tue") { echo 'active'; } ?>">Tue</span></li>
+      <li><span class="<?php if ($weekDay == "Wed") { echo 'active'; } ?>">Wed</span></li>
+      <li><span class="<?php if ($weekDay == "Thu") { echo 'active'; } ?>">Thu</span></li>
+      <li><span class="<?php if ($weekDay == "Fri") { echo 'active'; } ?>">Fri</span></li>
+      <li><span class="<?php if ($weekDay == "Sat") { echo 'active'; } ?>">Sat</span></li>
+      <li><span class="<?php if ($weekDay == "Sun") { echo 'active'; } ?>">Sun</span></li>
+    </ul>
 
     <table>
       <tr>
