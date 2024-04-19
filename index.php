@@ -60,7 +60,7 @@
       .weekdays {
         margin: 0;
         padding: 10px 0;
-        background-color: #ddd;
+        background-color: lightblue;
         font-family: kids;
         font-size: 20px;
       }
@@ -68,13 +68,12 @@
       .weekdays li {
         display: inline-block;
         width: 13.6%;
-        color: #666;
         text-align: center;
       }
 
       .weekdays li .active {
         padding: 5px;
-        background: #1abc9c;
+        background: orchid;
       }
     </style>
 
