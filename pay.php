@@ -3,20 +3,8 @@
 <html>
   <head>
     <title>Kids Reward System</title>
-    <style>
-      @font-face {
-        font-family: kids;
-        font-style: normal;
-        font-weight: normal;
-        src: url(fonts/maple3cartoon.woff);
-      }
+      <link rel="stylesheet" type="text/css" href="./styles.css">
 
-      body {
-        background-color: #fef1de;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-      }
-    </style>
 
     <meta http-equiv="refresh" content="1;url=<?php echo $_SERVER['HTTP_REFERER']; ?>" />
   </head>
