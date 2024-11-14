@@ -1,0 +1,26 @@
+{
+    "k1": {
+        "name": "Jack",
+        "currency": "\u00a3",
+        "image": "rockets",
+        "progressBar": true,
+        "maxRewards": 18,
+        "pay": 2,
+        "pushoverAppToken": "",
+        "pushoverUserKey": "",
+        "rewards": 9,
+        "cash": 0
+    },
+    "k2": {
+        "name": "Jill",
+        "currency": "\u00a3",
+        "image": "stars",
+        "progressBar": true,
+        "maxRewards": 18,
+        "pay": 2,
+        "pushoverAppToken": "",
+        "pushoverUserKey": "",
+        "rewards": 0,
+        "cash": 0
+    }
+}
