@@ -11,7 +11,7 @@ $k2p = calculatePercentage($data->k2->rewards, $data->k2->maxRewards);
 <html>
 <head>
   <title>Kids Reward System</title>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles.php">
   <meta http-equiv="refresh" content="300" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />

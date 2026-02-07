@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>Kids Reward System</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.php">
     <meta http-equiv="refresh" content="1;url=<?php echo $_SERVER['HTTP_REFERER']; ?>" />
   </head>
 

@@ -1,0 +1,81 @@
+<?php
+// styles.php - Dynamic CSS generation
+header('Content-Type: text/css');
+include 'config.php';
+
+$data = getData('kids.json');
+$font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff';
+?>
+@font-face {
+    font-family: kids;
+    font-style: normal;
+    font-weight: normal;
+    src: url(fonts/<?php echo $font; ?>);
+  }
+
+  body {
+    background-color: #fef1de;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  h1 {
+    font-family: kids;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 25px;
+    text-align: left;
+    table-layout: fixed;
+  }
+
+  th {
+    font-family: kids;
+    font-size: 60px;
+    font-weight: normal;
+    color: #000000;
+    text-align: center;
+  }
+
+  .inlineTable {
+    display: inline-block;
+    margin: 1em;
+  }
+
+  td {
+    font-family: kids;
+    font-size: 30px;
+    font-weight: normal;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: lightblue;
+    font-family: kids;
+    font-size: 20px;
+  }
+
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+  }
+
+  .weekdays li .active {
+    padding: 5px;
+    background: orchid;
+  }
