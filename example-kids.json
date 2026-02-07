@@ -1,5 +1,8 @@
 {
     "font": "maple3cartoon.woff",
+    "textColor": "#000000",
+    "backgroundColor": "#fef1de",
+    "accentColor": "lightblue",
     "k1": {
         "name": "Jack",
         "currency": "\u00a3",
