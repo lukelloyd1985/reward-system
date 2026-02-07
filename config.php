@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', '0');
+
 define('MIN_PERCENTAGE', 5);
 define('MAX_PERCENTAGE', 95);
 define('DEFAULT_PERCENTAGE', 7);
