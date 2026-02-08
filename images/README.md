@@ -2,15 +2,15 @@
 
 This directory contains reward icon sets used in the Kids Reward System.
 
-## Current Reward Types
+## Current Reward Types (themed rewards)
 
-- **rockets** - Rocket ship themed rewards
-- **stars** - Star themed rewards
-- **cars** - Car themed rewards (directory created, needs assets)
-- **bikes** - Bike themed rewards (directory created, needs assets)
-- **footballs** - Football themed rewards (directory created, needs assets)
-- **unicorns** - Unicorn themed rewards (directory created, needs assets)
-- **rainbows** - Rainbow themed rewards (directory created, needs assets)
+- **rockets**
+- **stars**
+- **cars**
+- **pawpatrol**
+- **footballs**
+- **unicorns**
+- **rainbows**
 
 ## File Structure
 
@@ -29,20 +29,16 @@ images/
 ### add.gif
 - **Purpose**: Animated GIF shown when a child earns a reward
 - **Background**: Must be transparent
-- **Recommended size**: 350px height (width scales proportionally)
 - **Animation**: Should be celebratory/positive (e.g., reward flying in, appearing with sparkles)
 
 ### remove.gif
 - **Purpose**: Animated GIF shown when a reward is removed
 - **Background**: Must be transparent
-- **Recommended size**: 350px height (width scales proportionally)
 - **Animation**: Should indicate removal (e.g., reward flying away, disappearing, fading out)
 
 ### icon.png
 - **Purpose**: Static icon displayed on the main page and in the progress bar
 - **Background**: Must be transparent
-- **Recommended size**: 75x75px (or proportional)
-- **Format**: PNG with alpha channel for transparency
 
 ## How to Add New Reward Types
 
@@ -96,9 +92,9 @@ To understand what the files should look like, examine the existing `rockets` or
 ```bash
 ls -lh images/rockets/
 # You'll see:
-# add.gif (829KB) - Rocket flying in animation
-# remove.gif (163KB) - Rocket flying away animation
-# icon.png (30KB) - Static rocket icon
+# add.gif - Rocket flying animation
+# remove.gif - Rocket destroyed animation
+# icon.png - Static rocket icon
 ```
 
 ## Tips for Good Reward Icons
@@ -108,12 +104,3 @@ ls -lh images/rockets/
 3. **Clear animations**: Make sure the add/remove actions are visually distinct
 4. **File size**: Keep GIFs under 2MB for fast loading
 5. **Theme appropriate**: Match the reward type to the child's interests
-
-## Need Help?
-
-The reward system automatically handles all the logic - you just need to provide the three image files per reward type. The system will:
-- Display `icon.png` on the main page (75x75px)
-- Show `add.gif` at 350px height when rewards are added
-- Show `remove.gif` at 350px height when rewards are removed
-
-No code changes are required once the image files are in place!
