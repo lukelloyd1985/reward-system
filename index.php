@@ -6,7 +6,6 @@ $weekDay = getWeekDay();
 $data = getData('kids.json');
 $k1p = calculatePercentage($data->k1->rewards, $data->k1->maxRewards);
 $k2p = calculatePercentage($data->k2->rewards, $data->k2->maxRewards);
-$accentColor = isset($data->accentColor) ? htmlspecialchars($data->accentColor) : 'lightblue';
 ?>
 
 <html>
