@@ -1,6 +1,0 @@
-# Placeholder for footballs reward icons
-# Required files:
-# - add.gif: animation when a reward is added
-# - remove.gif: animation when a reward is removed
-# - icon.png: actual reward icon displayed in index.php and used in progress bar
-# All backgrounds must be transparent
