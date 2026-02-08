@@ -11,7 +11,15 @@
   <?php
     $kid = $_GET["kid"];
     $data = json_decode(file_get_contents('kids.json'));
-    $data->$kid->rewards = $data->$kid->rewards - 1;
+
+    // If rewards are at 0, wrap around to maxRewards-1 and reduce cash
+    if ($data->$kid->rewards == 0) {
+      $data->$kid->rewards = $data->$kid->maxRewards - 1;
+      $data->$kid->cash = $data->$kid->cash - $data->$kid->pay;
+    } else {
+      $data->$kid->rewards = $data->$kid->rewards - 1;
+    }
+
     $newData = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents('kids.json', $newData);
 

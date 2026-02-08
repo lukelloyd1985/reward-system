@@ -28,7 +28,7 @@ Options exist for each kid (k1 & k2) within the JSON file...
 
 `pay`: amount to pay after max rewards
 
-`allowNegativeRewards`: allow rewards to go negative (below 0)? toggle by using "true" or "false". When set to "true", the remove button will always be visible, allowing rewards to be taken back even at 0 balance
+`allowNegativeRewards`: (deprecated) this option is no longer used. The remove button is always visible, and when rewards are at 0, removing a reward will set rewards to maxRewards-1 and reduce cash by the pay amount
 
 `pushoverAppToken`: add pushover.net "Application/API Token" if push notifications are required
 
