@@ -5,6 +5,9 @@ include 'config.php';
 
 $data = getData('kids.json');
 $font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff';
+$textColor = isset($data->textColor) ? htmlspecialchars($data->textColor) : '#000000';
+$backgroundColor = isset($data->backgroundColor) ? htmlspecialchars($data->backgroundColor) : '#fef1de';
+$accentColor = isset($data->accentColor) ? htmlspecialchars($data->accentColor) : 'lightblue';
 ?>
 @font-face {
     font-family: kids;
@@ -14,7 +17,7 @@ $font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff
   }
 
   body {
-    background-color: #fef1de;
+    background-color: <?php echo $backgroundColor; ?>;
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
@@ -22,7 +25,7 @@ $font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff
   h1 {
     font-family: kids;
     font-weight: normal;
-    color: #000000;
+    color: <?php echo $textColor; ?>;
     text-align: center;
   }
 
@@ -39,7 +42,7 @@ $font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff
     font-family: kids;
     font-size: 60px;
     font-weight: normal;
-    color: #000000;
+    color: <?php echo $textColor; ?>;
     text-align: center;
   }
 
@@ -58,13 +61,13 @@ $font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff
 
   a {
     text-decoration: none;
-    color: #000000;
+    color: <?php echo $textColor; ?>;
   }
 
   .weekdays {
     margin: 0;
     padding: 10px 0;
-    background-color: lightblue;
+    background-color: <?php echo $accentColor; ?>;
     font-family: kids;
     font-size: 20px;
   }
@@ -78,4 +81,25 @@ $font = isset($data->font) ? htmlspecialchars($data->font) : 'maple3cartoon.woff
   .weekdays li .active {
     padding: 5px;
     background: orchid;
+  }
+
+  .progressbar-container {
+    padding: 10px 50px;
+    font-size: 16px;
+  }
+
+  .progressbar-outer {
+    background-color: <?php echo $accentColor; ?>;
+    border-radius: 8px;
+  }
+
+  .progressbar-inner {
+    padding: 5px;
+    background-color: <?php echo $accentColor; ?>;
+    border-radius: 8px;
+  }
+
+  .progressbar-inner img {
+    height: 20px;
+    float: right;
   }
