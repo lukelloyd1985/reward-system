@@ -12,11 +12,11 @@
     $kid = $_GET["kid"];
     $data = json_decode(file_get_contents('kids.json'));
 
-    // If rewards are at 0, wrap around to maxRewards-1 and reduce cash
-    if ($data->$kid->rewards == 0) {
+    // If rewards are at 0 and allowNegativeRewards is enabled, wrap around to maxRewards-1 and reduce cash
+    if ($data->$kid->rewards == 0 && $data->$kid->allowNegativeRewards) {
       $data->$kid->rewards = $data->$kid->maxRewards - 1;
       $data->$kid->cash = $data->$kid->cash - $data->$kid->pay;
-    } else {
+    } elseif ($data->$kid->rewards > 0) {
       $data->$kid->rewards = $data->$kid->rewards - 1;
     }
 
