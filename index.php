@@ -12,7 +12,21 @@ $k2p = calculatePercentage($data->k2->rewards, $data->k2->maxRewards);
 <head>
   <title>Kids Reward System</title>
   <link rel="stylesheet" type="text/css" href="./styles.php">
-  <meta http-equiv="refresh" content="300" />
+  <?php
+    // Check if any kid has reached max rewards and should auto-cashout
+    $autoCashout = '';
+    if ($data->k1->rewards == $data->k1->maxRewards && $data->k1->maxRewards > 0) {
+      $autoCashout = 'add.php?kid=k1&cashout=1';
+    } elseif (isset($data->k2) && $data->k2->rewards == $data->k2->maxRewards && $data->k2->maxRewards > 0) {
+      $autoCashout = 'add.php?kid=k2&cashout=1';
+    }
+
+    if ($autoCashout) {
+      echo '<meta http-equiv="refresh" content="1;url=' . $autoCashout . '" />';
+    } else {
+      echo '<meta http-equiv="refresh" content="300" />';
+    }
+  ?>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
