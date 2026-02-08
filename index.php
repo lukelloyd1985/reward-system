@@ -30,8 +30,8 @@ $k2p = calculatePercentage($data->k2->rewards, $data->k2->maxRewards);
 
   <table>
     <tr>
-      <th><a href="add.php?kid=k1">+</a> <?php echo htmlspecialchars($data->k1->name); ?> <?php if ($data->k1->rewards > 0) { echo '<a href="remove.php?kid=k1">-</a>'; } ?></th>
-      <th <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><a href="add.php?kid=k2">+</a> <?php echo htmlspecialchars($data->k2->name); ?> <?php if ($data->k2->rewards > 0) { echo '<a href="remove.php?kid=k2">-</a>'; } ?></th>
+      <th><a href="add.php?kid=k1">+</a> <?php echo htmlspecialchars($data->k1->name); ?> <?php if ($data->k1->rewards > 0 || $data->k1->allowNegativeRewards) { echo '<a href="remove.php?kid=k1">-</a>'; } ?></th>
+      <th <?php if (!$data->k2) { echo 'style="display:none"'; } ?>><a href="add.php?kid=k2">+</a> <?php echo htmlspecialchars($data->k2->name); ?> <?php if ($data->k2->rewards > 0 || $data->k2->allowNegativeRewards) { echo '<a href="remove.php?kid=k2">-</a>'; } ?></th>
     </tr>
     <tr>
       <td><div <?php if (!$data->k1->progressBar) { echo 'style="display:none"'; } ?> class="progressbar-container"><div class="progressbar-outer"><div class="progressbar-inner" style="width:<?php echo $k1p; ?>%">&nbsp;<img src="images/<?php echo htmlspecialchars($data->k1->image); ?>/icon.png"></div></div></div></td>

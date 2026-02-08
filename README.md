@@ -28,6 +28,8 @@ Options exist for each kid (k1 & k2) within the JSON file...
 
 `pay`: amount to pay after max rewards
 
+`allowNegativeRewards`: when rewards are at 0, allow removing rewards to set rewards to maxRewards-1 and reduce cash by the pay amount? toggle by using "true" or "false"
+
 `pushoverAppToken`: add pushover.net "Application/API Token" if push notifications are required
 
 `pushoverUserKey`: add pushover.net "User Key" if push notifications are required
