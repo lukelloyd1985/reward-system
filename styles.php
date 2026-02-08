@@ -82,3 +82,24 @@ $accentColor = isset($data->accentColor) ? htmlspecialchars($data->accentColor) 
     padding: 5px;
     background: orchid;
   }
+
+  .progressbar-container {
+    padding: 10px 50px;
+    font-size: 16px;
+  }
+
+  .progressbar-outer {
+    background-color: <?php echo $accentColor; ?>;
+    border-radius: 8px;
+  }
+
+  .progressbar-inner {
+    padding: 5px;
+    background-color: <?php echo $accentColor; ?>;
+    border-radius: 8px;
+  }
+
+  .progressbar-inner img {
+    height: 20px;
+    float: right;
+  }
