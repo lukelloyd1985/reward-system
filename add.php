@@ -10,11 +10,15 @@
   <body>
     <?php
       $kid = $_GET["kid"];
+      $cashout = isset($_GET["cashout"]) ? $_GET["cashout"] : false;
       $data = json_decode(file_get_contents('kids.json'));
-      if ($data->$kid->rewards == $data->$kid->maxRewards) {
+
+      if ($cashout && $data->$kid->rewards == $data->$kid->maxRewards) {
+        // Cash out and reset
         $data->$kid->cash = $data->$kid->cash + $data->$kid->pay;
         $data->$kid->rewards = 0;
       } else {
+        // Increment reward
         $data->$kid->rewards = $data->$kid->rewards + 1;
       }
       $newData = json_encode($data, JSON_PRETTY_PRINT);
