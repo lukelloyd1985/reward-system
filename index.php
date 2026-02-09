@@ -32,6 +32,9 @@ $k2p = calculatePercentage($data->k2->rewards, $data->k2->maxRewards);
   <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+  <div style="text-align: right; padding: 10px;">
+    <a href="settings.php" style="font-size: 24px; padding: 10px;">⚙️ Settings</a>
+  </div>
   <ul class="weekdays">
     <li><span class="<?php echo isActiveDay($weekDay, 'Mon'); ?>">Mon</span></li>
     <li><span class="<?php echo isActiveDay($weekDay, 'Tue'); ?>">Tue</span></li>
