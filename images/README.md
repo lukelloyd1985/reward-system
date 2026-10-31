@@ -12,6 +12,15 @@ This directory contains reward icon sets used in the Kids Reward System.
 - **unicorns**
 - **rainbows**
 
+### Seasonal reward types
+
+- **halloween-pumpkins** / **halloween-ghosts**
+- **christmas-trees** / **christmas-snowmen**
+- **easter-eggs** / **easter-bunnies**
+
+Switch to these from the settings page when the season arrives. They can be
+regenerated (or tweaked) with `python3 tools/make_seasonal_icons.py` (needs Pillow).
+
 ## File Structure
 
 Each reward type must have its own subdirectory containing exactly three files:
